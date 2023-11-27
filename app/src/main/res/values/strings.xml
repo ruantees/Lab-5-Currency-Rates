@@ -2,4 +2,6 @@
     <string name="app_name">Currency rates</string>
     <string name="currency_rates">Currency rates</string>
     <string name="update_rates">Update rates</string>
+    <string name="currency">Currency:</string>
+    <string name="rate">Rate:</string>
 </resources>
