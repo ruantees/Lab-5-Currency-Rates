@@ -13,12 +13,4 @@
         android:textSize="30sp"
         android:text="@string/currency"/>
 
-    <TextView
-        android:id="@+id/rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="@string/rate"
-        android:textColor="@color/grey"/>
-
 </LinearLayout>
