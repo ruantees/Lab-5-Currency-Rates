@@ -1,5 +1,6 @@
 package com.example.currencyrates
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import java.io.IOException
 
@@ -13,10 +14,12 @@ open class AsyncDataLoader(private val adapter: CurrencyAdapter) : AsyncTask<Str
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Deprecated("Deprecated in Java",
         ReplaceWith("super.onPostExecute(result)", "android.os.AsyncTask")
     )
     override fun onPostExecute(result: String) {
         adapter.ratesList = result
+        adapter.notifyDataSetChanged()
     }
 }

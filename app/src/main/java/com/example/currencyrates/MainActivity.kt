@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity() : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,6 +29,7 @@ class MainActivity() : AppCompatActivity() {
     }
 
     private fun getDataByAsyncTask(adapter: CurrencyAdapter) {
-        object : AsyncDataLoader(adapter) {}.execute(ApiUrls.FLOATRATES_API_URL)
+        val dataLoader = AsyncDataLoader(adapter)
+        dataLoader.execute(ApiUrls.FLOATRATES_API_URL)
     }
 }
